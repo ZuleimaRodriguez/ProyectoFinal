@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseDatosBITland", "BaseDatosBITland\BaseDatosBITland.csproj", "{D91507CF-E7D8-4874-ADD2-927127011139}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D91507CF-E7D8-4874-ADD2-927127011139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91507CF-E7D8-4874-ADD2-927127011139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91507CF-E7D8-4874-ADD2-927127011139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91507CF-E7D8-4874-ADD2-927127011139}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
