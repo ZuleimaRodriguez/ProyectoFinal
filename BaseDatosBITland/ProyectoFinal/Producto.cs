@@ -13,7 +13,8 @@ namespace BaseDatosBITland.ProyectoFinal
         public int IdProducto { get; set; }
         public string Personaje { get; set; }
         public string categoria { get; set; }
-        public string Tipo { get; set; }
+        public virtual string Tipo { get; set; }
         public int precio { get; set; }
+        public string Foto { get; set; }
     }
 }

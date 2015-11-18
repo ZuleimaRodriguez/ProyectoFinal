@@ -1,0 +1,17 @@
+﻿<Window x:Class="BaseDatosBITland.Nivel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nivel" Height="375.299" Width="457.769">
+    <Grid x:Name="btnEliminar" Margin="0,0,2,7">
+        <Label Content="Id nivel:" HorizontalAlignment="Left" Margin="73,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nivel:" HorizontalAlignment="Left" Margin="85,82,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNivel" HorizontalAlignment="Left" Height="23" Margin="129,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtIdNivel" HorizontalAlignment="Left" Height="23" Margin="129,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="292,51,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="292,88,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="292,124,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="dtGrib" HorizontalAlignment="Left" Margin="76,192,0,0" VerticalAlignment="Top" Height="78" Width="173"/>
+        <Button x:Name="btnMostrar" Content="Mostrar Todos" HorizontalAlignment="Left" Margin="303,197,0,0" VerticalAlignment="Top" Width="96"/>
+
+    </Grid>
+</Window>

@@ -12,6 +12,7 @@ namespace BaseDatosBITland.ProyectoFinal
         [Key]
         public int IdNivel { get; set; }
         public int nivel { get; set; }
+        public virtual ICollection<Cliente> Cliente { get; set; }
 
     }
 }

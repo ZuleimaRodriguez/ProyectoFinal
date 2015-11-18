@@ -60,6 +60,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Cliente.xaml.cs">
+      <DependentUpon>Cliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201511131621386_Cliente.cs" />
     <Compile Include="Migrations\201511131621386_Cliente.Designer.cs">
       <DependentUpon>201511131621386_Cliente.cs</DependentUpon>
@@ -68,25 +77,58 @@
     <Compile Include="Migrations\201511180503089_clases.Designer.cs">
       <DependentUpon>201511180503089_clases.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511181521487_clases2.cs" />
+    <Compile Include="Migrations\201511181521487_clases2.Designer.cs">
+      <DependentUpon>201511181521487_clases2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511181708427_clases21.cs" />
+    <Compile Include="Migrations\201511181708427_clases21.Designer.cs">
+      <DependentUpon>201511181708427_clases21.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="ProyectoFinal\BITland.cs" />
+    <Compile Include="Nivel.xaml.cs">
+      <DependentUpon>Nivel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Producto.xaml.cs">
+      <DependentUpon>Producto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoFinal\BITland1.cs" />
     <Compile Include="ProyectoFinal\Cliente.cs" />
     <Compile Include="ProyectoFinal\Factura.cs" />
     <Compile Include="ProyectoFinal\Nivel.cs" />
     <Compile Include="ProyectoFinal\Producto.cs" />
     <Compile Include="ProyectoFinal\TipoProducto.cs" />
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Compile Include="TipoProducto.xaml.cs">
+      <DependentUpon>TipoProducto.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Cliente.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Nivel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Producto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TipoProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -107,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511180503089_clases.resx">
       <DependentUpon>201511180503089_clases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181521487_clases2.resx">
+      <DependentUpon>201511181521487_clases2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511181708427_clases21.resx">
+      <DependentUpon>201511181708427_clases21.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -12,7 +12,8 @@ namespace BaseDatosBITland.ProyectoFinal
         public int id { get; set; }
         public string Tienda { get; set; }
         public string Nombre { get; set; }
-        public string Nivel { get; set; }
+        public virtual int Nivel { get; set; }
         public string Direccion { get; set; }
+        public virtual ICollection<Factura> Factura { get; set; }
     }
 }

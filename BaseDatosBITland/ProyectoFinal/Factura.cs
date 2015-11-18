@@ -11,9 +11,9 @@ namespace BaseDatosBITland.ProyectoFinal
     {
         [Key]
         public int IdFactura { get; set; }
-        public int id { get; set; }
+        public virtual int id { get; set; }
         public int cantidad { get; set; }
-        public int total { get; set; }
+
 
     }
 }

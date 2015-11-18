@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace BaseDatosBITland
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Nivel.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Nivel : Window
     {
-        public MainWindow()
+        public Nivel()
         {
             InitializeComponent();
         }

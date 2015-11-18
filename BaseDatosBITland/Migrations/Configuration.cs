@@ -5,14 +5,14 @@ namespace BaseDatosBITland.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BaseDatosBITland.ProyectoFinal.BITland>
+    internal sealed class Configuration : DbMigrationsConfiguration<BaseDatosBITland.ProyectoFinal.BITland1>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(BaseDatosBITland.ProyectoFinal.BITland context)
+        protected override void Seed(BaseDatosBITland.ProyectoFinal.BITland1 context)
         {
             //  This method will be called after migrating to the latest version.
 
