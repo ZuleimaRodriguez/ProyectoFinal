@@ -7,11 +7,11 @@
         <Label Content="Nivel:" HorizontalAlignment="Left" Margin="85,82,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtNivel" HorizontalAlignment="Left" Height="23" Margin="129,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtIdNivel" HorizontalAlignment="Left" Height="23" Margin="129,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="292,51,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="292,88,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="292,124,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="292,51,0,0" VerticalAlignment="Top" Width="75" Click="btnAgregar_Click"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="292,88,0,0" VerticalAlignment="Top" Width="75" Click="btnActualizar_Click"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="292,124,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <DataGrid x:Name="dtGrib" HorizontalAlignment="Left" Margin="76,192,0,0" VerticalAlignment="Top" Height="78" Width="173"/>
-        <Button x:Name="btnMostrar" Content="Mostrar Todos" HorizontalAlignment="Left" Margin="303,197,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btnMostrar" Content="Mostrar Todos" HorizontalAlignment="Left" Margin="303,197,0,0" VerticalAlignment="Top" Width="96" Click="btnMostrar_Click"/>
 
     </Grid>
 </Window>

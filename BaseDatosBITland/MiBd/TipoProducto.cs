@@ -5,14 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace BaseDatosBITland.ProyectoFinal
+namespace BaseDatosBITland.MiBd
 {
     public class TipoProducto
     {
         [Key]
-        public int IdTipo {get; set;}
+        public int idTipo { get; set; }
         public string Tipo { get; set; }
-        public virtual ICollection<Producto> Producto { get; set; }
-
+        public virtual ICollection<Producto> Productos { get; set; }
     }
 }

@@ -5,14 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace BaseDatosBITland.ProyectoFinal
+namespace BaseDatosBITland.MiBd
 {
     public class Nivel
     {
         [Key]
-        public int IdNivel { get; set; }
-        public int nivel { get; set; }
-        public virtual ICollection<Cliente> Cliente { get; set; }
-
+        public int idNivel { get; set; }
+        public string Niveles { get; set; }
+        public virtual ICollection<Cliente> Clientes { get; set; }
     }
 }

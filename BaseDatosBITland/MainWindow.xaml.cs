@@ -23,5 +23,17 @@ namespace BaseDatosBITland
         {
             InitializeComponent();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            BaseDatosBITland.Cliente db = new BaseDatosBITland.Cliente();
+            db.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            BaseDatosBITland.Nivel db = new BaseDatosBITland.Nivel();
+            db.Show();
+        }
     }
 }
