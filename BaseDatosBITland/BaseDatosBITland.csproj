@@ -60,8 +60,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BITland.xaml.cs">
+      <DependentUpon>BITland.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria.xaml.cs">
+      <DependentUpon>Categoria.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.xaml.cs">
       <DependentUpon>Cliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Factura.xaml.cs">
+      <DependentUpon>Factura.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -82,6 +91,10 @@
     <Compile Include="Migrations\201511201703241_listo.Designer.cs">
       <DependentUpon>201511201703241_listo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511240340497_forms.cs" />
+    <Compile Include="Migrations\201511240340497_forms.Designer.cs">
+      <DependentUpon>201511240340497_forms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nivel.xaml.cs">
       <DependentUpon>Nivel.xaml</DependentUpon>
@@ -92,6 +105,14 @@
     <Compile Include="TipoProducto.xaml.cs">
       <DependentUpon>TipoProducto.xaml</DependentUpon>
     </Compile>
+    <Page Include="BITland.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Categoria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +121,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Factura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -136,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511201703241_listo.resx">
       <DependentUpon>201511201703241_listo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511240340497_forms.resx">
+      <DependentUpon>201511240340497_forms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

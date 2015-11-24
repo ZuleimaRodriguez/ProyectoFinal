@@ -26,13 +26,13 @@ namespace BaseDatosBITland
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            BaseDatosBITland.Cliente db = new BaseDatosBITland.Cliente();
+            BaseDatosBITland.BITland db = new BaseDatosBITland.BITland();
             db.Show();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            BaseDatosBITland.Nivel db = new BaseDatosBITland.Nivel();
+            BaseDatosBITland.Factura db = new BaseDatosBITland.Factura();
             db.Show();
         }
     }
