@@ -8,10 +8,10 @@
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="23" Margin="105,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtTipo" HorizontalAlignment="Left" Height="23" Margin="105,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="289,53,0,0" VerticalAlignment="Top" Width="75" Click="btnAgregar_Click"/>
-        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="289,99,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="289,142,0,0" VerticalAlignment="Top" Width="75"/>
-        <DataGrid x:Name="dtGrid" HorizontalAlignment="Left" Margin="64,224,0,0" VerticalAlignment="Top" Height="63" Width="179"/>
-        <Button x:Name="btnMostrar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="289,224,0,0" VerticalAlignment="Top" Width="105"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="289,99,0,0" VerticalAlignment="Top" Width="75" Click="btnActualizar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="289,142,0,0" VerticalAlignment="Top" Width="75" Click="btnEliminar_Click"/>
+        <DataGrid x:Name="dtGrid" HorizontalAlignment="Left" Margin="24,173,0,0" VerticalAlignment="Top" Height="114" Width="219"/>
+        <Button x:Name="btnMostrar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="289,224,0,0" VerticalAlignment="Top" Width="105" Click="btnMostrar_Click"/>
 
     </Grid>
 </Window>

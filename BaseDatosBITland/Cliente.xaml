@@ -20,7 +20,7 @@
         <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="343.776,165,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="btnEliminar_Click"/>
         <Label Content="Id:" HorizontalAlignment="Left" Margin="71.776,49,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox x:Name="txtIdCliente" HorizontalAlignment="Left" Height="23" Margin="99.776,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <DataGrid x:Name="dtGrid" HorizontalAlignment="Left" Margin="32.776,232,0,0" VerticalAlignment="Top" Height="115" Width="213" Grid.Column="1"/>
+        <DataGrid x:Name="dtGrid" HorizontalAlignment="Left" Margin="51,232,0,0" VerticalAlignment="Top" Height="122" Width="328" Grid.ColumnSpan="2"/>
         <Button Content="Mostrar todos" HorizontalAlignment="Left" Margin="343.776,261,0,0" VerticalAlignment="Top" Width="87" Grid.Column="1" Click="Button_Click_1"/>
 
     </Grid>

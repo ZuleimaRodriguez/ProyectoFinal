@@ -40,6 +40,7 @@ namespace BaseDatosBITland
                 emp.Categorias = txtCategoria.Text;
                 db.Categorias.Add(emp);
                 db.SaveChanges();
+                MessageBox.Show("Se guardo exitosamente");
 
             }
             else
@@ -62,6 +63,7 @@ namespace BaseDatosBITland
                     em.Categorias = txtCategoria.Text;
                     
                     db.SaveChanges();
+                    MessageBox.Show("Se actualizo exitosamente");
                 }
             }
             else { MessageBox.Show("solo Numeros #id y caracteres en Categoria"); }
@@ -80,6 +82,7 @@ namespace BaseDatosBITland
                 {
                     db.Categorias.Remove(em);
                     db.SaveChanges();
+                    MessageBox.Show("Se elimino exitosamente");
                 }
 
             }

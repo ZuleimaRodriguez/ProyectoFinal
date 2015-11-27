@@ -39,10 +39,11 @@ namespace BaseDatosBITland
                 BaseDatosBITland.MiBd.Producto emp = new BaseDatosBITland.MiBd.Producto();
                 emp.Personaje = txtPersonaje.Text;
                 emp.Precio = int.Parse(txtPrecio.Text);
-                emp.CategoriaCategoria = (string)cbxCategoria.SelectedValue;
-                emp.TipoProductoTipo = (string)cbxTipo.SelectedValue;
+                emp.CategoriaidCategoria = (string)cbxCategoria.SelectedValue;
+                emp.TipoidTipo = (string)cbxTipo.SelectedValue;
                 db.Productos.Add(emp);
                 db.SaveChanges();
+                MessageBox.Show("Se guardo exitosamente");
 
             }
             else
@@ -51,7 +52,7 @@ namespace BaseDatosBITland
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
-            if ((Regex.IsMatch(txtPrecio.Text, @"^\d+$")) && (Regex.IsMatch(txtPersonaje.Text, @"^[a-zA-Z]+$")))
+            if ((Regex.IsMatch(txtIdProducto.Text, @"^\d+$")) && (Regex.IsMatch(txtPrecio.Text, @"^\d+$")) && (Regex.IsMatch(txtPersonaje.Text, @"^[a-zA-Z]+$")))
             {
 
                 //actualiza
@@ -64,9 +65,10 @@ namespace BaseDatosBITland
                 {
                     em.Personaje = txtPersonaje.Text;
                     em.Precio = int.Parse(txtPrecio.Text);
-                    em.CategoriaCategoria = (string)cbxCategoria.SelectedValue;
-                    em.TipoProductoTipo = (string)cbxTipo.SelectedValue;
+                    em.CategoriaidCategoria = (string)cbxCategoria.SelectedValue;
+                    em.TipoidTipo = (string)cbxTipo.SelectedValue;
                     db.SaveChanges();
+                    MessageBox.Show("Se actualizo exitosamente");
                 }
             }
             else { MessageBox.Show("solo caracteres en Personaje y numeros en precio"); }
@@ -85,6 +87,7 @@ namespace BaseDatosBITland
                 {
                     db.Productos.Remove(em);
                     db.SaveChanges();
+                    MessageBox.Show("Se elimino exitosamente");
                 }
 
             }
@@ -107,7 +110,7 @@ namespace BaseDatosBITland
                               s.idProducto,
                               s.Personaje,
                               s.Precio,
-                              s.CategoriaCategoria
+                              CategoriaCategoria = s.CategoriaidCategoria
                           };
                 btGrid.ItemsSource = reg.ToList();
             }
@@ -116,15 +119,31 @@ namespace BaseDatosBITland
 
         private void Grid_Loaded_1(object sender, RoutedEventArgs e)
         {
+            
+
+        }
+
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        {
             bit db = new bit();
-            cbxCategoria.ItemsSource = db.Niveles.ToList();
-            cbxCategoria.DisplayMemberPath = "Categoria";
-            cbxCategoria.SelectedValuePath = "Categoria";
+            cbxCategoria.ItemsSource = db.Categorias.ToList();
+            cbxCategoria.DisplayMemberPath = "Categorias";
+            cbxCategoria.SelectedValuePath = "idTipo";
             bit d = new bit();
             cbxTipo.ItemsSource = d.Tipo.ToList();
             cbxTipo.DisplayMemberPath = "Tipo";
-            cbxTipo.SelectedValuePath = "Tipo";
+            cbxTipo.SelectedValuePath = "idCategoria";
+        }
 
+        private void btnMostarTodo_Click(object sender, RoutedEventArgs e)
+        {
+            bit db = new bit();
+
+
+            var reg = from s in db.Productos
+
+                      select s;
+            btGrid.ItemsSource = reg.ToList();
         }
     }
 }

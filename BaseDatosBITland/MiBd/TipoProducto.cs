@@ -12,6 +12,6 @@ namespace BaseDatosBITland.MiBd
         [Key]
         public int idTipo { get; set; }
         public string Tipo { get; set; }
-        public virtual ICollection<Producto> Productos { get; set; }
+
     }
 }

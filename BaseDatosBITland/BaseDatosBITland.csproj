@@ -81,23 +81,14 @@
     <Compile Include="MiBd\Factura.cs" />
     <Compile Include="MiBd\Nivel.cs" />
     <Compile Include="MiBd\Producto.cs" />
-    <Compile Include="MiBd\Relacion.cs" />
     <Compile Include="MiBd\TipoProducto.cs" />
-    <Compile Include="Migrations\201511201614286_dbSetup.cs" />
-    <Compile Include="Migrations\201511201614286_dbSetup.Designer.cs">
-      <DependentUpon>201511201614286_dbSetup.cs</DependentUpon>
+    <Compile Include="Migrations\201511271741573_corregido.cs" />
+    <Compile Include="Migrations\201511271741573_corregido.Designer.cs">
+      <DependentUpon>201511271741573_corregido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511201703241_listo.cs" />
-    <Compile Include="Migrations\201511201703241_listo.Designer.cs">
-      <DependentUpon>201511201703241_listo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511240340497_forms.cs" />
-    <Compile Include="Migrations\201511240340497_forms.Designer.cs">
-      <DependentUpon>201511240340497_forms.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511270525299_Factura.cs" />
-    <Compile Include="Migrations\201511270525299_Factura.Designer.cs">
-      <DependentUpon>201511270525299_Factura.cs</DependentUpon>
+    <Compile Include="Migrations\201511271800258_medio.cs" />
+    <Compile Include="Migrations\201511271800258_medio.Designer.cs">
+      <DependentUpon>201511271800258_medio.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nivel.xaml.cs">
@@ -160,17 +151,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201511201614286_dbSetup.resx">
-      <DependentUpon>201511201614286_dbSetup.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511271741573_corregido.resx">
+      <DependentUpon>201511271741573_corregido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511201703241_listo.resx">
-      <DependentUpon>201511201703241_listo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511240340497_forms.resx">
-      <DependentUpon>201511240340497_forms.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511270525299_Factura.resx">
-      <DependentUpon>201511270525299_Factura.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511271800258_medio.resx">
+      <DependentUpon>201511271800258_medio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

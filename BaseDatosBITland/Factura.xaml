@@ -12,19 +12,17 @@
         <DataGrid x:Name="dtGridCompra" HorizontalAlignment="Left" Margin="329,173,0,0" VerticalAlignment="Top" Height="128" Width="262"/>
         <Label Content="Mostrar Productos" HorizontalAlignment="Left" Margin="75,26,0,0" VerticalAlignment="Top"/>
         <DataGrid x:Name="dtGridProducto" HorizontalAlignment="Left" Margin="33,173,0,0" VerticalAlignment="Top" Height="128" Width="249"/>
-        <Button Content="Buscar" HorizontalAlignment="Left" Margin="120,138,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="120,138,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
         <Label Content="Comprar producto" HorizontalAlignment="Left" Margin="390,26,0,0" VerticalAlignment="Top"/>
         <Label Content="Id del producto:" HorizontalAlignment="Left" Margin="295,83,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="23" Margin="394,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Cantidad:" HorizontalAlignment="Left" Margin="329,114,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Height="23" Margin="394,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Agregar &#xD;&#xA;al carrito" HorizontalAlignment="Left" Margin="531,96,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Realizar&#xD;&#xA;compra" HorizontalAlignment="Left" Margin="483,389,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click_1" Height="49"/>
-        <Button Content="Limpiar &#xD;&#xA;Casillas" HorizontalAlignment="Left" Margin="341,389,0,0" VerticalAlignment="Top" Width="97" Height="49"/>
+        <Button x:Name="btnAgregar" Content="Agregar &#xD;&#xA;al carrito" HorizontalAlignment="Left" Margin="531,96,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
+        <Button x:Name="btnComprar" Content="Realizar&#xD;&#xA;compra" HorizontalAlignment="Left" Margin="483,389,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click_1" Height="49"/>
+        <Button x:Name="btnLimpiar" Content="Limpiar &#xD;&#xA;Casillas" HorizontalAlignment="Left" Margin="341,389,0,0" VerticalAlignment="Top" Width="97" Height="49"/>
         <Label x:Name="lblcantidad" Content="Carrito:" HorizontalAlignment="Left" Margin="329,140,0,0" VerticalAlignment="Top" Width="239"/>
-        <Label x:Name="lblSubtotal" Content="Subtotal: $" HorizontalAlignment="Left" Margin="431,306,0,0" VerticalAlignment="Top"/>
-        <Label Content="Comision: $" HorizontalAlignment="Left" Margin="426,332,0,0" VerticalAlignment="Top"/>
-        <Label Content="Total a entregar: $" HorizontalAlignment="Left" Margin="392,358,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTotal" Content="Total a entregar: $" HorizontalAlignment="Left" Margin="392,358,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

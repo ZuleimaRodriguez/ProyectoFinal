@@ -3,7 +3,7 @@ namespace BaseDatosBITland.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class forms : DbMigration
+    public partial class medio : DbMigration
     {
         public override void Up()
         {

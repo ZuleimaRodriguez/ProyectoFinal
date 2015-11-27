@@ -38,6 +38,7 @@ namespace BaseDatosBITland
                 emp.Niveles = txtNivel.Text;
                 db.Niveles.Add(emp);
                 db.SaveChanges();
+                MessageBox.Show("Se guardo exitosamente");
 
             }
             else
@@ -46,7 +47,7 @@ namespace BaseDatosBITland
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
-            if ((Regex.IsMatch(txtNivel.Text, @"^\d+$")))
+            if ((Regex.IsMatch(txtIdNivel.Text, @"^\d+$")) && (Regex.IsMatch(txtNivel.Text, @"^[a-zA-Z]+$")))
             {
 
                 //actualiza
@@ -60,6 +61,7 @@ namespace BaseDatosBITland
                     em.Niveles = txtNivel.Text;
                     
                     db.SaveChanges();
+                    MessageBox.Show("Se actualizo exitosamente");
                 }
             }
             else { MessageBox.Show("solo Numeros #id y caracteres en Nivel"); }
@@ -78,6 +80,7 @@ namespace BaseDatosBITland
                 {
                     db.Niveles.Remove(em);
                     db.SaveChanges();
+                    MessageBox.Show("Se elimino exitosamente");
                 }
 
             }

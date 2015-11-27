@@ -7,13 +7,13 @@ namespace BaseDatosBITland.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class listo : IMigrationMetadata
+    public sealed partial class medio : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(listo));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(medio));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511201703241_listo"; }
+            get { return "201511271800258_medio"; }
         }
         
         string IMigrationMetadata.Source

@@ -72,7 +72,7 @@ namespace BaseDatosBITland
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
             if ((Regex.IsMatch(txtIdCliente.Text, @"^\d+$")) && (Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z]+$")) && (Regex.IsMatch(txtTienda.Text, @"^[a-zA-Z]+$"))&&
-                (Regex.IsMatch(txtDireccion.Text, @"^\d+$")))
+                (Regex.IsMatch(txtDireccion.Text, @"^[a-zA-Z]+$")))
             {
 
                 //actualiza

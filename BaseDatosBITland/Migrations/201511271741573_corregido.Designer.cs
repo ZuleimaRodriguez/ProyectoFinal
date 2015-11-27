@@ -7,13 +7,13 @@ namespace BaseDatosBITland.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class dbSetup : IMigrationMetadata
+    public sealed partial class corregido : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(dbSetup));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(corregido));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511201614286_dbSetup"; }
+            get { return "201511271741573_corregido"; }
         }
         
         string IMigrationMetadata.Source

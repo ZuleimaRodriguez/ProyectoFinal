@@ -14,8 +14,8 @@ namespace BaseDatosBITland.MiBd
        public int idProducto { get; set; }
        public string Personaje { get; set; }
        public int Precio { get; set; }
-       public virtual string TipoProductoTipo { get; set; }
-       public virtual string CategoriaCategoria { get; set; }
-       public virtual ICollection<Relacion> Relaciones { get; set; }
+       public virtual string TipoidTipo { get; set; }
+       public virtual string CategoriaidCategoria { get; set; }
+       
     }
 }
