@@ -15,6 +15,6 @@ namespace BaseDatosBITland.MiBd
         public string Tienda { get; set; }
         public virtual string NivelNivel { get; set; }
         public string Direccion { get; set; }
-        public virtual ICollection<Factura> Facturas { get; set; }
+        //public virtual ICollection<Factura> Facturas { get; set; }
     }
 }

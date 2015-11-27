@@ -53,5 +53,13 @@ namespace BaseDatosBITland
             BaseDatosBITland.TipoProducto db = new BaseDatosBITland.TipoProducto();
             db.Show();
         }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            BaseDatosBITland.MainWindow db = new BaseDatosBITland.MainWindow();
+            db.Show();
+            BaseDatosBITland.BITland db1 = new BaseDatosBITland.BITland();
+            db1.Close();
+        }
     }
 }

@@ -8,12 +8,18 @@ using System.ComponentModel.DataAnnotations;
 namespace BaseDatosBITland.MiBd
 {
     public class Factura
+
     {
+        public Factura()
+        {
+            this.ClienteidCliente = new Cliente();
+            this.listVenta = new List<Producto>();
+        }
+
         [Key]
         public int idFactura { get; set; }
-        public int Cantidad { get; set; }
-        public virtual int ClienteidCliente { get; set; }
-        public virtual ICollection<Relacion> Relaciones { get; set; }
-
+        public DateTime Fecha { get; set; }
+        public virtual Cliente ClienteidCliente { get; set; }
+        public virtual List<Producto> listVenta { get; set; }
     }
 }

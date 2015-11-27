@@ -95,6 +95,10 @@
     <Compile Include="Migrations\201511240340497_forms.Designer.cs">
       <DependentUpon>201511240340497_forms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511270525299_Factura.cs" />
+    <Compile Include="Migrations\201511270525299_Factura.Designer.cs">
+      <DependentUpon>201511270525299_Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nivel.xaml.cs">
       <DependentUpon>Nivel.xaml</DependentUpon>
@@ -164,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511240340497_forms.resx">
       <DependentUpon>201511240340497_forms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511270525299_Factura.resx">
+      <DependentUpon>201511270525299_Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
