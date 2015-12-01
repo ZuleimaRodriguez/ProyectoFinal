@@ -30,7 +30,8 @@ namespace BaseDatosBITland.Ventanas
         {
             //guarda nuevo registro
             //Instanciar base de datos
-            if ((Regex.IsMatch(txbPersonaje.Text, @"^[a-zA-Z]+$")) && (Regex.IsMatch(txbPrecio.Text, @"^\d+$")) && (Regex.IsMatch(txbCantidad.Text, @"^\d+$")))
+
+            if ((Regex.IsMatch(txbPersonaje.Text, @"^[a-zA-Z]+$")) && (Regex.IsMatch(txbPrecio.Text, @"^\d+$")) && (Regex.IsMatch(txbCantidad.Text, @"^\d+$")) && (cbxCategoria.SelectedIndex > -1)&&(cbxTipo.SelectedIndex > -1))
             {
 
                 BITland db = new BITland();
@@ -42,6 +43,7 @@ namespace BaseDatosBITland.Ventanas
                 emp.TipoProductoidTipo = (int)cbxTipo.SelectedValue;
                 db.Productos.Add(emp);
                 db.SaveChanges();
+                MessageBox.Show("Se agrego correctamente");
 
             }
             else
@@ -50,7 +52,7 @@ namespace BaseDatosBITland.Ventanas
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
-            if ((Regex.IsMatch(txbPersonaje.Text, @"^[a-zA-Z]+$")) && (Regex.IsMatch(txbPrecio.Text, @"^\d+$")) && (Regex.IsMatch(txbCantidad.Text, @"^\d+$"))&&(Regex.IsMatch(txbIdProducto.Text,  @"^\d+$")))
+            if ((Regex.IsMatch(txbPersonaje.Text, @"^[ a-zA-Z]+$")) && (Regex.IsMatch(txbPrecio.Text, @"^\d+$")) && (Regex.IsMatch(txbCantidad.Text, @"^\d+$"))&&(Regex.IsMatch(txbIdProducto.Text,  @"^\d+$")))
             {
 
                 //actualiza
@@ -66,6 +68,7 @@ namespace BaseDatosBITland.Ventanas
                     em.CategoriaidCategoria = (int)cbxCategoria.SelectedValue;
                     em.TipoProductoidTipo = (int)cbxTipo.SelectedValue;
                     db.SaveChanges();
+                    MessageBox.Show("Se actualizo correctamente");
                 }
             }
             else { MessageBox.Show("Solo caracteres en Personaje y/o numeros en Id Producto, Precio y Cantidad"); }
@@ -73,7 +76,9 @@ namespace BaseDatosBITland.Ventanas
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-             //elimina registro
+            if (Regex.IsMatch(txbIdProducto.Text, @"^\d+$"))
+            {
+                //elimina registro
                 BITland db = new BITland();
 
                 int id = int.Parse(txbIdProducto.Text);
@@ -82,9 +87,10 @@ namespace BaseDatosBITland.Ventanas
                 {
                     db.Productos.Remove(em);
                     db.SaveChanges();
+                    MessageBox.Show("Se elimino correctamente");
                 }
+            }
 
-            
             else { MessageBox.Show("Solo ingrese Numeros en id Producto"); }
         }
 
@@ -106,11 +112,13 @@ namespace BaseDatosBITland.Ventanas
             cbxCategoria.ItemsSource = db.Categorias.ToList();
             cbxCategoria.DisplayMemberPath = "Cate";
             cbxCategoria.SelectedValuePath = "idCategoria";
+            cbxCategoria.SelectedIndex = 0;
 
             BITland db1 = new BITland();
             cbxTipo.ItemsSource = db1.Tipos.ToList();
             cbxTipo.DisplayMemberPath = "Tipo";
             cbxTipo.SelectedValuePath = "idTipo";
+            cbxCategoria.SelectedIndex = 0;
         }
     }
 }

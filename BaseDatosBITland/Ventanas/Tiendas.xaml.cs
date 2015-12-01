@@ -29,7 +29,7 @@ namespace BaseDatosBITland.Ventanas
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-            if ((Regex.IsMatch(txbTienda.Text, @"^[a-zA-Z]+$")) && (Regex.IsMatch(txbNombre.Text, @"^[a-zA-Z]+$")) && (Regex.IsMatch(txbDireccion.Text, @"^[a-zA-Z]+$")))
+            if ((Regex.IsMatch(txbTienda.Text, @"^[a-zA-Z\s]+$")) && (Regex.IsMatch(txbNombre.Text, @"^[a-zA-Z\s]+$")) && (Regex.IsMatch(txbDireccion.Text, @"^[a-zA-Z\s]+$")))
             {
 
                 BITland db = new BITland();
@@ -47,9 +47,8 @@ namespace BaseDatosBITland.Ventanas
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
-            if ((Regex.IsMatch(txbIdTienda.Text, @"^\d+$")) && (Regex.IsMatch(txbTienda.Text, @"^[a-zA-Z]+$")) && (Regex.IsMatch(txbNombre.Text, @"^[a-zA-Z]+$")) && (Regex.IsMatch(txbDireccion.Text, @"^[a-zA-Z]+$")))
+            if ((Regex.IsMatch(txbIdTienda.Text, @"^\d+$")) && (Regex.IsMatch(txbTienda.Text, @"^[a-zA-Z\s]+$")) && (Regex.IsMatch(txbNombre.Text, @"^[ a-zA-Z\s]+$")) && (Regex.IsMatch(txbDireccion.Text, @"^[a-zA-Z\s]\d+$")))
             {
-
                 //actualiza
                 BITland db = new BITland();
 
@@ -62,6 +61,7 @@ namespace BaseDatosBITland.Ventanas
                     em.Direccion = txbDireccion.Text;
                     em.Tienda = txbTienda.Text;
                     db.SaveChanges();
+                    MessageBox.Show("Se actualizo correctamente");
                 }
             }
             else { MessageBox.Show("Solo Numeros en Id Tienda y/o caracteres en Nombre, Direccion y Tienda"); }
@@ -81,6 +81,7 @@ namespace BaseDatosBITland.Ventanas
                 {
                     db.Clientes.Remove(em);
                     db.SaveChanges();
+                    MessageBox.Show("Se elimino correctamente");
                 }
 
             }
@@ -93,7 +94,7 @@ namespace BaseDatosBITland.Ventanas
             BITland db = new BITland();
 
 
-            var reg = from s in db.Categorias
+            var reg = from s in db.Clientes
 
                       select s;
             dgTienda.ItemsSource = reg.ToList();

@@ -31,7 +31,7 @@ namespace BaseDatosBITland.Ventanas
         {
             //guarda nuevo registro
             //Instanciar base de datos
-            if ((Regex.IsMatch(txbTipo.Text, @"^[a-zA-Z]+$")))
+            if ((Regex.IsMatch(txbTipo.Text, @"^[a-zA-Z\s]+$")))
             {
 
                 BITland db = new BITland();
@@ -39,6 +39,7 @@ namespace BaseDatosBITland.Ventanas
                 emp.Tipo = txbTipo.Text;
                 db.Tipos.Add(emp);
                 db.SaveChanges();
+                MessageBox.Show("Se agrego Correctamente");
 
             }
             else
@@ -47,7 +48,7 @@ namespace BaseDatosBITland.Ventanas
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
-            if ((Regex.IsMatch(txbIdTipo.Text, @"^\d+$")) && (Regex.IsMatch(txbTipo.Text, @"^[a-zA-Z]+$")))
+            if ((Regex.IsMatch(txbIdTipo.Text, @"^\d+$")) && (Regex.IsMatch(txbTipo.Text, @"^[a-zA-Z\s]+$")))
             {
 
                 //actualiza

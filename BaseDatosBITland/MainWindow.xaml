@@ -4,10 +4,10 @@
         Title="Menu Principal" Height="520.149" Width="622.015">
     <Grid>
         <Button Content="Realizar Pedido BITland" HorizontalAlignment="Left" Margin="207,96,0,0" VerticalAlignment="Top" Width="194" Height="63" Click="Button_Click_1"/>
-        <Button Content="Agregar Tienda" HorizontalAlignment="Left" Margin="40,365,0,0" VerticalAlignment="Top" Width="109" Height="38"/>
-        <Button Content="Agregar Categoria" HorizontalAlignment="Left" Margin="182,366,0,0" VerticalAlignment="Top" Width="112" Height="38"/>
-        <Button Content="Agregar Producto" HorizontalAlignment="Left" Margin="320,365,0,0" VerticalAlignment="Top" Width="100" Height="38"/>
-        <Button Content="Agregar Tipo &#xD;&#xA;de producto" HorizontalAlignment="Left" Margin="442,366,0,0" VerticalAlignment="Top" Width="108" Height="37"/>
+        <Button Content="Agregar Tienda" HorizontalAlignment="Left" Margin="40,365,0,0" VerticalAlignment="Top" Width="109" Height="38" Click="Button_Click_2"/>
+        <Button Content="Agregar Categoria" HorizontalAlignment="Left" Margin="182,366,0,0" VerticalAlignment="Top" Width="112" Height="38" Click="Button_Click_3"/>
+        <Button Content="Agregar Producto" HorizontalAlignment="Left" Margin="320,365,0,0" VerticalAlignment="Top" Width="100" Height="38" Click="Button_Click_4"/>
+        <Button Content="Agregar Tipo &#xD;&#xA;de producto" HorizontalAlignment="Left" Margin="442,366,0,0" VerticalAlignment="Top" Width="108" Height="37" Click="Button_Click_5"/>
 
     </Grid>
 </Window>

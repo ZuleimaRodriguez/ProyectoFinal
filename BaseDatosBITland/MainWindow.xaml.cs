@@ -29,9 +29,34 @@ namespace BaseDatosBITland
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
+            Ventanas.Factu ob = new Ventanas.Factu();
+            ob.Show();
             
 
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Ventanas.Tiendas ob = new Ventanas.Tiendas();
+            ob.Show();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Ventanas.Cate ob = new Ventanas.Cate();
+            ob.Show();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Ventanas.Produ ob = new Ventanas.Produ();
+            ob.Show();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Ventanas.Tipo ob = new Ventanas.Tipo();
+            ob.Show();
         }
     }
 }

@@ -75,6 +75,44 @@ namespace BaseDatosBITland.Ventanas
                     return;
                 }
             }
+            //product quantity
+            int qty;
+
+            // we try to parse the number of the textbox if the number is invalid 
+            int.TryParse(txbCantidad.Text, out qty);
+            //if qty is 0 we assign 0 otherwise we assign the actual parsed value
+            qty = qty == 0 ? 1 : qty;
+            //really basic validation that checks inventory
+            if (qty <= tmpProduct.Cantidad)
+            {
+                //we check if product is not already in the cart if it is we remove the old one
+                ShoppingCart.RemoveAll(s => s.idProducto == tmpProduct.idProducto);
+                //we add the product to the Cart
+                ShoppingCart.Add(new Producto()
+                {
+                    idProducto = tmpProduct.idProducto,
+                    Personaje = tmpProduct.Personaje,
+                    Precio = tmpProduct.Precio,
+                    CategoriaidCategoria=tmpProduct.CategoriaidCategoria,
+                    Cantidad = qty
+                });
+
+                //perform  query on Shopping Cart to select certain fields and perform subtotal operation 
+                BindDataGrid();
+                //<----------------------
+                //cleanup variables
+                tmpProduct = null;
+                //once the products had been added we clear the textbox of code and quantity.
+                txbCodigoPro.Text = string.Empty;
+                txbCantidad.Text = string.Empty;
+                //clean up current product label
+                lblTotalProducto.Content = "Current product N/A";
+            }
+            else
+            {
+                MessageBox.Show("Not enough Inventory", "Inventory Error", MessageBoxButton.OK,
+                    MessageBoxImage.Exclamation);
+            }
         }
         //this method will clear/reset form values
         private void CleanUp()
@@ -217,6 +255,16 @@ namespace BaseDatosBITland.Ventanas
 
         private void gbCarrito_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
+        }
+
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            BITland db = new BITland();
+            cbxTienda.ItemsSource = db.Clientes.ToList();
+            cbxTienda.DisplayMemberPath = "Tienda";
+            cbxTienda.SelectedValuePath = "idCliente";
+            cbxTienda.SelectedIndex = 0;
 
         }
     }

@@ -29,7 +29,7 @@ namespace BaseDatosBITland.Ventanas
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-            if (Regex.IsMatch(txbCategoria.Text, @"^[a-zA-Z]+$"))
+            if (Regex.IsMatch(txbCategoria.Text, @"^[a-zA-Z\s]+$"))
             {
 
                 BITland db = new BITland();
@@ -46,7 +46,7 @@ namespace BaseDatosBITland.Ventanas
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
-            if ((Regex.IsMatch(txbIdCategoria.Text, @"^\d+$")) && (Regex.IsMatch(txbCategoria.Text, @"^[a-zA-Z]+$")))
+            if ((Regex.IsMatch(txbIdCategoria.Text, @"^\d+$")) && (Regex.IsMatch(txbCategoria.Text, @"^[a-zA-Z\s]+$")))
             {
 
                 //actualiza
@@ -86,7 +86,7 @@ namespace BaseDatosBITland.Ventanas
                 }
 
             }
-            else { MessageBox.Show("solo Numeros #id"); }
+            else { MessageBox.Show("solo Numeros en id Categoria"); }
         }
 
         private void btnMostrar_Click(object sender, RoutedEventArgs e)
