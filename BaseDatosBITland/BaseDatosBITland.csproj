@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201512010157542_Ventanas.Designer.cs">
       <DependentUpon>201512010157542_Ventanas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512010446596_Listo.cs" />
+    <Compile Include="Migrations\201512010446596_Listo.Designer.cs">
+      <DependentUpon>201512010446596_Listo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProyectoFinal\BITland.cs" />
     <Compile Include="ProyectoFinal\Categoria.cs" />
@@ -142,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512010157542_Ventanas.resx">
       <DependentUpon>201512010157542_Ventanas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512010446596_Listo.resx">
+      <DependentUpon>201512010446596_Listo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

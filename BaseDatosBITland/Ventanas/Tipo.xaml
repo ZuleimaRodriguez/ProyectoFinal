@@ -7,11 +7,11 @@
         <TextBox x:Name="txbIdTipo" HorizontalAlignment="Left" Height="23" Margin="196,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" FontSize="16"/>
         <Label Content="Tipo de producto:" HorizontalAlignment="Left" Margin="55,74,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="txbTipo" HorizontalAlignment="Left" Height="23" Margin="196,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" FontSize="16"/>
-        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="369,38,0,0" VerticalAlignment="Top" Width="92" FontSize="16" Height="31"/>
-        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="369,78,0,0" VerticalAlignment="Top" Width="92" FontSize="16" Height="29"/>
-        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="369,116,0,0" VerticalAlignment="Top" Width="92" RenderTransformOrigin="0.164,0.401" FontSize="16" Height="33"/>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="369,38,0,0" VerticalAlignment="Top" Width="92" FontSize="16" Height="31" Click="btnAgregar_Click"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="369,78,0,0" VerticalAlignment="Top" Width="92" FontSize="16" Height="29" Click="btnActualizar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="369,116,0,0" VerticalAlignment="Top" Width="92" RenderTransformOrigin="0.164,0.401" FontSize="16" Height="33" Click="btnEliminar_Click"/>
         <DataGrid x:Name="dgTipo" HorizontalAlignment="Left" Margin="55,160,0,0" VerticalAlignment="Top" Height="109" Width="175" RenderTransformOrigin="0.254,0.202" FontSize="16"/>
-        <Button x:Name="btnMostar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="259,160,0,0" VerticalAlignment="Top" Width="87" Height="26"/>
+        <Button x:Name="btnMostar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="259,160,0,0" VerticalAlignment="Top" Width="87" Height="26" Click="btnMostar_Click"/>
 
     </Grid>
 </Window>

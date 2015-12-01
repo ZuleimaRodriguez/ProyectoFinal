@@ -7,11 +7,11 @@
         <TextBox x:Name="txbIdCategoria" HorizontalAlignment="Left" Height="23" Margin="139,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
         <Label Content="Categoria:" HorizontalAlignment="Left" Margin="52,116,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="txbCategoria" HorizontalAlignment="Left" Height="23" Margin="140,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
-        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="335,56,0,0" VerticalAlignment="Top" Width="93" FontSize="16" Height="31"/>
-        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="332,101,0,0" VerticalAlignment="Top" Width="99" FontSize="16" Height="27"/>
-        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="345,140,0,0" VerticalAlignment="Top" Width="75" FontSize="16"/>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="335,56,0,0" VerticalAlignment="Top" Width="93" FontSize="16" Height="31" Click="btnAgregar_Click"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="332,101,0,0" VerticalAlignment="Top" Width="99" FontSize="16" Height="27" Click="btnActualizar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="345,140,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Click="btnEliminar_Click"/>
         <DataGrid x:Name="dgCategoria" HorizontalAlignment="Left" Margin="50,187,0,0" VerticalAlignment="Top" Height="123" Width="209"/>
-        <Button x:Name="btnMostrar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="286,187,0,0" VerticalAlignment="Top" Width="102" Height="30"/>
+        <Button x:Name="btnMostrar" Content="Mostrar Todo" HorizontalAlignment="Left" Margin="286,187,0,0" VerticalAlignment="Top" Width="102" Height="30" Click="btnMostrar_Click"/>
 
     </Grid>
 </Window>
