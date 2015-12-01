@@ -64,6 +64,10 @@
     <Compile Include="Migrations\201512010056251_Clases.Designer.cs">
       <DependentUpon>201512010056251_Clases.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512010157542_Ventanas.cs" />
+    <Compile Include="Migrations\201512010157542_Ventanas.Designer.cs">
+      <DependentUpon>201512010157542_Ventanas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProyectoFinal\BITland.cs" />
     <Compile Include="ProyectoFinal\Categoria.cs" />
@@ -71,6 +75,21 @@
     <Compile Include="ProyectoFinal\Factura.cs" />
     <Compile Include="ProyectoFinal\Producto.cs" />
     <Compile Include="ProyectoFinal\TipoProducto.cs" />
+    <Compile Include="Ventanas\Cate.xaml.cs">
+      <DependentUpon>Cate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Factu.xaml.cs">
+      <DependentUpon>Factu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Produ.xaml.cs">
+      <DependentUpon>Produ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Tiendas.xaml.cs">
+      <DependentUpon>Tiendas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Tipo.xaml.cs">
+      <DependentUpon>Tipo.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -83,6 +102,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Ventanas\Cate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Factu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Produ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Tiendas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Tipo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -100,6 +139,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201512010056251_Clases.resx">
       <DependentUpon>201512010056251_Clases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512010157542_Ventanas.resx">
+      <DependentUpon>201512010157542_Ventanas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
