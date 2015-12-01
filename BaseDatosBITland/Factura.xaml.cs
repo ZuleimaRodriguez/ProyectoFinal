@@ -125,17 +125,17 @@ namespace BaseDatosBITland
         {
             bit db = new bit();
             
-            var reg = from s in db.Productos
-                      where s.TipoidTipo == cbxTipoPro.SelectedValuePath && 
-                      s.CategoriaidCategoria == cbxCategoria.SelectedValuePath
+            /*var reg = from s in db.Productos
+                      where s.TipoidTipo == cbxTipoPro.SelectedValue && 
+                      s.CategoriaidCategoria == cbxCategoria.SelectedValue
                       select new
                       {
                           s.idProducto,
                           s.Personaje,
                           s.Precio
-                      };
+                      };*/
                    
-            dtGridProducto.ItemsSource = reg.ToList();
+           // dtGridProducto.ItemsSource = reg.ToList();
 
         }
 

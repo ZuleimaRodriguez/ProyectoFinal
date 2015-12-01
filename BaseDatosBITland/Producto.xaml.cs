@@ -39,8 +39,8 @@ namespace BaseDatosBITland
                 BaseDatosBITland.MiBd.Producto emp = new BaseDatosBITland.MiBd.Producto();
                 emp.Personaje = txtPersonaje.Text;
                 emp.Precio = int.Parse(txtPrecio.Text);
-                emp.CategoriaidCategoria = (string)cbxCategoria.SelectedValue;
-                emp.TipoidTipo = (string)cbxTipo.SelectedValue;
+                emp.CategoriaidCategoria = (int)cbxCategoria.SelectedValue;
+                emp.TipoidTipo = (int)cbxTipo.SelectedValue;
                 db.Productos.Add(emp);
                 db.SaveChanges();
                 MessageBox.Show("Se guardo exitosamente");
@@ -65,8 +65,8 @@ namespace BaseDatosBITland
                 {
                     em.Personaje = txtPersonaje.Text;
                     em.Precio = int.Parse(txtPrecio.Text);
-                    em.CategoriaidCategoria = (string)cbxCategoria.SelectedValue;
-                    em.TipoidTipo = (string)cbxTipo.SelectedValue;
+                    em.CategoriaidCategoria = (int)cbxCategoria.SelectedValue;
+                    em.TipoidTipo = (int)cbxTipo.SelectedValue;
                     db.SaveChanges();
                     MessageBox.Show("Se actualizo exitosamente");
                 }

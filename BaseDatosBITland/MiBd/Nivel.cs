@@ -12,6 +12,6 @@ namespace BaseDatosBITland.MiBd
         [Key]
         public int idNivel { get; set; }
         public string Niveles { get; set; }
-        public virtual ICollection<Cliente> Clientes { get; set; }
+        //public virtual ICollection<Cliente> Clientes { get; set; }
     }
 }

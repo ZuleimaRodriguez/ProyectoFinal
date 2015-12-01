@@ -82,13 +82,9 @@
     <Compile Include="MiBd\Nivel.cs" />
     <Compile Include="MiBd\Producto.cs" />
     <Compile Include="MiBd\TipoProducto.cs" />
-    <Compile Include="Migrations\201511271741573_corregido.cs" />
-    <Compile Include="Migrations\201511271741573_corregido.Designer.cs">
-      <DependentUpon>201511271741573_corregido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511271800258_medio.cs" />
-    <Compile Include="Migrations\201511271800258_medio.Designer.cs">
-      <DependentUpon>201511271800258_medio.cs</DependentUpon>
+    <Compile Include="Migrations\201511302348236_errorResuelto.cs" />
+    <Compile Include="Migrations\201511302348236_errorResuelto.Designer.cs">
+      <DependentUpon>201511302348236_errorResuelto.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nivel.xaml.cs">
@@ -151,11 +147,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201511271741573_corregido.resx">
-      <DependentUpon>201511271741573_corregido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511271800258_medio.resx">
-      <DependentUpon>201511271800258_medio.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511302348236_errorResuelto.resx">
+      <DependentUpon>201511302348236_errorResuelto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
