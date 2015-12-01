@@ -10,10 +10,18 @@ namespace BaseDatosBITland.ProyectoFinal
     public class Producto
     {
         [Key]
-        public int IdProducto { get; set; }
+        public int idProducto { get; set; }
+
         public string Personaje { get; set; }
-        public string categoria { get; set; }
-        public string Tipo { get; set; }
-        public int precio { get; set; }
+
+        public double Precio { get; set; }
+
+        public int Cantidad { get; set; }
+
+        public virtual int CategoriaidCategoria { get; set; }
+
+        public virtual int TipoProductoidTipo { get; set; }
+
+        public virtual List<Factura> FacturaListaVenta { get; set; } 
     }
 }

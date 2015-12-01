@@ -7,11 +7,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BaseDatosBITland.ProyectoFinal
 {
-    public class Nivel
+    public class Categoria
     {
         [Key]
-        public int IdNivel { get; set; }
-        public int nivel { get; set; }
-
+        public int idCategoria { get; set; }
+        public string Cate { get; set; }
+        public virtual ICollection<Producto> Productos { get; set; }
     }
 }

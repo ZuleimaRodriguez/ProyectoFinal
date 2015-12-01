@@ -60,19 +60,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Migrations\201511131621386_Cliente.cs" />
-    <Compile Include="Migrations\201511131621386_Cliente.Designer.cs">
-      <DependentUpon>201511131621386_Cliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511180503089_clases.cs" />
-    <Compile Include="Migrations\201511180503089_clases.Designer.cs">
-      <DependentUpon>201511180503089_clases.cs</DependentUpon>
+    <Compile Include="Migrations\201512010056251_Clases.cs" />
+    <Compile Include="Migrations\201512010056251_Clases.Designer.cs">
+      <DependentUpon>201512010056251_Clases.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProyectoFinal\BITland.cs" />
+    <Compile Include="ProyectoFinal\Categoria.cs" />
     <Compile Include="ProyectoFinal\Cliente.cs" />
     <Compile Include="ProyectoFinal\Factura.cs" />
-    <Compile Include="ProyectoFinal\Nivel.cs" />
     <Compile Include="ProyectoFinal\Producto.cs" />
     <Compile Include="ProyectoFinal\TipoProducto.cs" />
     <Page Include="MainWindow.xaml">
@@ -102,11 +98,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201511131621386_Cliente.resx">
-      <DependentUpon>201511131621386_Cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511180503089_clases.resx">
-      <DependentUpon>201511180503089_clases.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512010056251_Clases.resx">
+      <DependentUpon>201512010056251_Clases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

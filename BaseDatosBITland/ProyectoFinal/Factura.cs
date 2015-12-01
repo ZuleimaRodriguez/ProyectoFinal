@@ -9,11 +9,20 @@ namespace BaseDatosBITland.ProyectoFinal
 {
     public class Factura
     {
+         public Factura ()
+        {
+            this.Tienda = new Cliente();
+            this.ListaVenta = new List<Producto>();
+        }
         [Key]
-        public int IdFactura { get; set; }
-        public int id { get; set; }
-        public int cantidad { get; set; }
-        public int total { get; set; }
+
+        public int idFactura { get; set; }
+
+        public virtual Cliente Tienda { get; set; }
+
+        public DateTime Fecha { get; set; }
+
+        public virtual List<Producto> ListaVenta { get; set; } 
 
     }
 }

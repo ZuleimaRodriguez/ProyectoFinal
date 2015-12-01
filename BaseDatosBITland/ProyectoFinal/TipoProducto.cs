@@ -10,8 +10,9 @@ namespace BaseDatosBITland.ProyectoFinal
     public class TipoProducto
     {
         [Key]
-        public int IdTipo {get; set;}
+        public int idTipo {get; set;}
         public string Tipo { get; set; }
+        public virtual ICollection<Producto> Productos { get; set; }
 
     }
 }
