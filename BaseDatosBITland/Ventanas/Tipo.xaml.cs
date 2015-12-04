@@ -59,6 +59,7 @@ namespace BaseDatosBITland.Ventanas
                 {
                     em.Tipo = txbTipo.Text;
                     db.SaveChanges();
+                    MessageBox.Show("Se actualizo correctamente");
                 }
             }
             else { MessageBox.Show("Solo Numeros en Id Tipo y/o caracteres en Tipo de producto"); }
@@ -77,6 +78,7 @@ namespace BaseDatosBITland.Ventanas
                 {
                     db.Tipos.Remove(em);
                     db.SaveChanges();
+                    MessageBox.Show("Se elimino correctamente");
                 }
 
             }

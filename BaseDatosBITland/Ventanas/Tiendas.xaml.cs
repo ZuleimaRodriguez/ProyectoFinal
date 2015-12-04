@@ -29,7 +29,7 @@ namespace BaseDatosBITland.Ventanas
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-            if ((Regex.IsMatch(txbTienda.Text, @"^[a-zA-Z\s]+$")) && (Regex.IsMatch(txbNombre.Text, @"^[a-zA-Z\s]+$")) && (Regex.IsMatch(txbDireccion.Text, @"^[a-zA-Z\s]+$")))
+            if ((Regex.IsMatch(txbTienda.Text, @"^[a-zA-Z\s]+$")) && (Regex.IsMatch(txbNombre.Text, @"^[a-zA-Z\s]+$")) && (Regex.IsMatch(txbDireccion.Text, @"^[a-zA-Z\s\d+]+$")))
             {
 
                 BITland db = new BITland();
@@ -47,7 +47,7 @@ namespace BaseDatosBITland.Ventanas
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
-            if ((Regex.IsMatch(txbIdTienda.Text, @"^\d+$")) && (Regex.IsMatch(txbTienda.Text, @"^[a-zA-Z\s]+$")) && (Regex.IsMatch(txbNombre.Text, @"^[ a-zA-Z\s]+$")) && (Regex.IsMatch(txbDireccion.Text, @"^[a-zA-Z\s]\d+$")))
+            if ((Regex.IsMatch(txbIdTienda.Text, @"^\d+$")) && (Regex.IsMatch(txbTienda.Text, @"^[a-zA-Z\s]+$")) && (Regex.IsMatch(txbNombre.Text, @"^[ a-zA-Z\s]+$")) && (Regex.IsMatch(txbDireccion.Text, @"^[a-zA-Z\s\d]+$")))
             {
                 //actualiza
                 BITland db = new BITland();

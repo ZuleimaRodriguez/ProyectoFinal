@@ -31,7 +31,7 @@ namespace BaseDatosBITland.Ventanas
             //guarda nuevo registro
             //Instanciar base de datos
 
-            if ((Regex.IsMatch(txbPersonaje.Text, @"^[a-zA-Z]+$")) && (Regex.IsMatch(txbPrecio.Text, @"^\d+$")) && (Regex.IsMatch(txbCantidad.Text, @"^\d+$")) && (cbxCategoria.SelectedIndex > -1)&&(cbxTipo.SelectedIndex > -1))
+            if ((Regex.IsMatch(txbPersonaje.Text, @"^[a-zA-Z\s]+$")) && (Regex.IsMatch(txbPrecio.Text, @"^\d+$")) && (Regex.IsMatch(txbCantidad.Text, @"^\d+$")) && (cbxCategoria.SelectedIndex > -1)&&(cbxTipo.SelectedIndex > -1))
             {
 
                 BITland db = new BITland();
@@ -52,7 +52,7 @@ namespace BaseDatosBITland.Ventanas
 
         private void btnActualizar_Click(object sender, RoutedEventArgs e)
         {
-            if ((Regex.IsMatch(txbPersonaje.Text, @"^[ a-zA-Z]+$")) && (Regex.IsMatch(txbPrecio.Text, @"^\d+$")) && (Regex.IsMatch(txbCantidad.Text, @"^\d+$"))&&(Regex.IsMatch(txbIdProducto.Text,  @"^\d+$")))
+            if ((Regex.IsMatch(txbPersonaje.Text, @"^[ a-zA-Z\s]+$")) && (Regex.IsMatch(txbPrecio.Text, @"^\d+$")) && (Regex.IsMatch(txbCantidad.Text, @"^\d+$"))&&(Regex.IsMatch(txbIdProducto.Text,  @"^\d+$")))
             {
 
                 //actualiza
@@ -118,7 +118,7 @@ namespace BaseDatosBITland.Ventanas
             cbxTipo.ItemsSource = db1.Tipos.ToList();
             cbxTipo.DisplayMemberPath = "Tipo";
             cbxTipo.SelectedValuePath = "idTipo";
-            cbxCategoria.SelectedIndex = 0;
+            cbxTipo.SelectedIndex = 0;
         }
     }
 }

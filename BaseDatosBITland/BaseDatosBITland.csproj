@@ -76,6 +76,10 @@
     <Compile Include="Migrations\201512011657002_yaCorrio.Designer.cs">
       <DependentUpon>201512011657002_yaCorrio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512040543397_Listo1.cs" />
+    <Compile Include="Migrations\201512040543397_Listo1.Designer.cs">
+      <DependentUpon>201512040543397_Listo1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProyectoFinal\BITland.cs" />
     <Compile Include="ProyectoFinal\Categoria.cs" />
@@ -157,6 +161,9 @@
     <EmbeddedResource Include="Migrations\201512011657002_yaCorrio.resx">
       <DependentUpon>201512011657002_yaCorrio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512040543397_Listo1.resx">
+      <DependentUpon>201512040543397_Listo1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -171,7 +178,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Imagenes\pantalla base de datos3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\logo__bitland_by_bitland-d7492oz.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

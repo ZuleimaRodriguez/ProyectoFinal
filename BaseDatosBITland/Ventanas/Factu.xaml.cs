@@ -35,7 +35,7 @@ namespace BaseDatosBITland.Ventanas
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             //If a product code is not empty we search the database
-            if (Regex.IsMatch(txbCodigoPro.Text.Trim(), @"^\d+$"))
+            if (Regex.IsMatch(txbCodigoPro.Text, @"^\d+$"))
             {
                 BITland db = new BITland();
                 //parse the product code as int from the TextBox
@@ -47,7 +47,7 @@ namespace BaseDatosBITland.Ventanas
                     //store in a temp variable (if user clicks on add we will need this for the Array)
                     tmpProduct = p;
                     //We display the product information on a label 
-                    lblTotalProducto.Content = string.Format("ID: {0}, Personaje: {1}, Precio: {2}, EnStock (Qty): {3}", p.idProducto, p.Personaje, p.Precio, p.Cantidad);
+                    lblTotalProducto.Content = string.Format("ID: {0}, Personaje: {1}, Precio: {2}, EnStock: {3}", p.idProducto, p.Personaje, p.Precio, p.Cantidad);
                 }
                 else
                 {
@@ -55,63 +55,73 @@ namespace BaseDatosBITland.Ventanas
                     MessageBox.Show("Producto no encontrado", "Error en el Id Producto", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
             }
+            else
+            {
+                MessageBox.Show("Solo numeros en codigo del producto");
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
-            //we first check if a product has been selected
-            if (tmpProduct == null)
+            if ((Regex.IsMatch(txbCantidad.Text, @"^\d+$")) && (Regex.IsMatch(txbCodigoPro.Text, @"^\d+$")))
             {
-                //if not we call the search button method
-                Button_Click_1(null, null);
-                //we check again if the product was found
+                //we first check if a product has been selected
                 if (tmpProduct == null)
                 {
-                    //if tmpProduct is empty (Product not found) we exit the procedure
-                    MessageBox.Show("No hay producto seleccionado", "No hay producto", MessageBoxButton.OK,
-                        MessageBoxImage.Exclamation);
-                    //exit procedure
-                    return;
+                    //if not we call the search button method
+                    Button_Click_1(null, null);
+                    //we check again if the product was found
+                    if (tmpProduct == null)
+                    {
+                        //if tmpProduct is empty (Product not found) we exit the procedure
+                        MessageBox.Show("No hay producto seleccionado", "No hay producto", MessageBoxButton.OK,
+                            MessageBoxImage.Exclamation);
+                        //exit procedure
+                        return;
+                    }
                 }
-            }
-            //product quantity
-            int qty;
+                //product quantity
+                int qty;
 
-            // we try to parse the number of the textbox if the number is invalid 
-            int.TryParse(txbCantidad.Text, out qty);
-            //if qty is 0 we assign 0 otherwise we assign the actual parsed value
-            qty = qty == 0 ? 1 : qty;
-            //really basic validation that checks inventory
-            if (qty <= tmpProduct.Cantidad)
-            {
-                //we check if product is not already in the cart if it is we remove the old one
-                ShoppingCart.RemoveAll(s => s.idProducto == tmpProduct.idProducto);
-                //we add the product to the Cart
-                ShoppingCart.Add(new Producto()
+                // we try to parse the number of the textbox if the number is invalid 
+                int.TryParse(txbCantidad.Text, out qty);
+                //if qty is 0 we assign 0 otherwise we assign the actual parsed value
+                qty = qty == 0 ? 1 : qty;
+                //really basic validation that checks inventory
+                if (qty <= tmpProduct.Cantidad)
                 {
-                    idProducto = tmpProduct.idProducto,
-                    Personaje = tmpProduct.Personaje,
-                    Precio = tmpProduct.Precio,
-                    CategoriaidCategoria=tmpProduct.CategoriaidCategoria,
-                    Cantidad = qty
-                });
+                    //we check if product is not already in the cart if it is we remove the old one
+                    ShoppingCart.RemoveAll(s => s.idProducto == tmpProduct.idProducto);
+                    //we add the product to the Cart
+                    ShoppingCart.Add(new Producto()
+                    {
+                        idProducto = tmpProduct.idProducto,
+                        Personaje = tmpProduct.Personaje,
+                        Precio = tmpProduct.Precio,
+                        CategoriaidCategoria = tmpProduct.CategoriaidCategoria,
+                        Cantidad = qty
+                    });
 
-                //perform  query on Shopping Cart to select certain fields and perform subtotal operation 
-                BindDataGrid();
-                //<----------------------
-                //cleanup variables
-                tmpProduct = null;
-                //once the products had been added we clear the textbox of code and quantity.
-                txbCodigoPro.Text = string.Empty;
-                txbCantidad.Text = string.Empty;
-                //clean up current product label
-                lblTotalProducto.Content = "Current product N/A";
+                    //perform  query on Shopping Cart to select certain fields and perform subtotal operation 
+                    BindDataGrid();
+                    //<----------------------
+                    //cleanup variables
+                    tmpProduct = null;
+                    //once the products had been added we clear the textbox of code and quantity.
+                    txbCodigoPro.Text = string.Empty;
+                    txbCantidad.Text = string.Empty;
+                    //clean up current product label
+                    lblTotalProducto.Content = "Current product N/A";
+                }
+                else
+                {
+                    MessageBox.Show("Not enough Inventory", "Error en el inventario", MessageBoxButton.OK,
+                        MessageBoxImage.Exclamation);
+                }
             }
             else
             {
-                MessageBox.Show("Not enough Inventory", "Inventory Error", MessageBoxButton.OK,
-                    MessageBoxImage.Exclamation);
+                MessageBox.Show("Solo numeros en codigo de producto y cantidad");
             }
         }
         //this method will clear/reset form values
